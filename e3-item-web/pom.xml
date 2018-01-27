@@ -117,6 +117,7 @@
         </dependency>
 
 
+
         <dependency>
             <groupId>cn.e3mall</groupId>
             <artifactId>e3-manager-interface</artifactId>
