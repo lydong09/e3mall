@@ -13,27 +13,27 @@ import cn.e3mall.service.ItemService;
 
 /**
  * 商品详情展示
- * @author 89388
  *
+ * @author 89388
  */
 @Controller
 public class ItemInfoController {
 
-	@Autowired
-	private ItemService itemService;
-	
-	@RequestMapping("/item/{itemId}")
-	public String showItemInfo(@PathVariable Long itemId , Model model){
-		//查询商品信息
-		TbItem tbItem = itemService.getItemById(itemId);
-		//增强商品pojo
-		Item item = new Item(tbItem);
-		//查询商品描述
-		TbItemDesc itemDesc = itemService.getTbItemDescById(itemId);
-		
-		model.addAttribute("item", item);
-		model.addAttribute("itemDesc", itemDesc);
-		
-		return "item";
-	}
+    @Autowired
+    private ItemService itemService;
+
+    @RequestMapping("/item/{itemId}")
+    public String showItemInfo(@PathVariable Long itemId, Model model) {
+        //查询商品信息
+        TbItem tbItem = itemService.getItemById(itemId);
+        //增强商品pojo
+        Item item = new Item(tbItem);
+        //查询商品描述
+        TbItemDesc itemDesc = itemService.getTbItemDescById(itemId);
+
+        model.addAttribute("item", item);
+        model.addAttribute("itemDesc", itemDesc);
+
+        return "item";
+    }
 }
