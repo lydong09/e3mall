@@ -6,11 +6,11 @@ import cn.e3mall.pojo.TbItem;
 import cn.e3mall.pojo.TbItemDesc;
 
 public interface ItemService {
-	TbItem getItemById(Long itemId);
-	
-	EasyUIDataGridResult findByPage(Integer page, Integer rows);
-	
-	E3Result addItem(TbItem item, String desc);
-	
-	TbItemDesc getTbItemDescById(Long itemId);
+    TbItem getItemById(Long itemId);
+
+    EasyUIDataGridResult findByPage(Integer page, Integer rows);
+
+    E3Result addItem(TbItem item, String desc);
+
+    TbItemDesc getTbItemDescById(Long itemId);
 }
