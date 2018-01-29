@@ -60,14 +60,14 @@ public class HtmlGenListener implements MessageListener {
             Template template = configuration.getTemplate("item.ftl");
 
             //创建输出流，指定路径和文件名
-            Writer writer = new FileWriter(new File("D:\\freemarker\\"+itemId)+".html");
+            Writer writer = new FileWriter(new File("D:\\freemarker\\"+itemId+".html"));
             //生成静态页面
             template.process(map,writer);
             //关闭流
             writer.close();
 
         }catch (Exception e){
-
+            e.printStackTrace();
         }
 
     }
