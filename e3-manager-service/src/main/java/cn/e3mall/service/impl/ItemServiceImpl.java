@@ -142,7 +142,7 @@ public class ItemServiceImpl implements ItemService {
         tbItemMapper.insert(item);
         tbItemDescMapper.insert(itemDesc);
 
-        //将商品同步到索引库，需要消息中间件activeMq,使用模板类
+        //将商品同步到索引库，需要消息中间件activeMq,使用模板类,发送添加的商品id
         jmsTemplate.send(topicDestination, new MessageCreator() {
 
             @Override

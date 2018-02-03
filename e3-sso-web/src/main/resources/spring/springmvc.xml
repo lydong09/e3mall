@@ -12,6 +12,9 @@
     <!--读取配置文件  -->
     <context:property-placeholder location="classpath:conf/resource.properties"/>
 
+    <!--有 了<mvc:default-servlet-handler/>  spring会用默认的Servlet来响应静态文件，(DefaultServletHttpRequestHandler在容器启动是会使用主流web容器默认servlet的名称列表自动查找容器的默认servlet。不然的话就不会响应静态文件，就会一直报404.希望对大家有所帮助！ -->
+    <mvc:default-servlet-handler />
+
     <context:component-scan base-package="cn.e3mall.sso.controller"/>
     <mvc:annotation-driven/>
     <bean
@@ -26,5 +29,7 @@
     <!-- 引用dubbo服务 -->
     <dubbo:application name="e3-sso-web"/>
     <dubbo:registry protocol="zookeeper" address="192.168.80.130:2181"/>
-    <!--<dubbo:reference interface="cn.e3mall.content.service.TbContentService" id="tbContentService"/>-->
+    <dubbo:reference interface="cn.e3mall.sso.service.RegisterService" id="registerService"/>
+    <dubbo:reference interface="cn.e3mall.sso.service.LoginService" id="loginService"/>
+    <dubbo:reference interface="cn.e3mall.sso.service.TokenService" id="tokenService"/>
 </beans>

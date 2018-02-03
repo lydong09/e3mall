@@ -8,7 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.e3mall</groupId>
-    <artifactId>e3-portal-web</artifactId>
+    <artifactId>e3-sso-web</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
