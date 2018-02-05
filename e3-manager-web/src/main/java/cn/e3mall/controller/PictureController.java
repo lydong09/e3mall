@@ -32,7 +32,7 @@ public class PictureController {
 
         Map map = new HashMap<>();
         try {
-            //创建FastDfs客户端对象,这个对象应该使用依赖注入,嫌麻烦不改了
+            //创建FastDfs客户端对象,这个对象应该使用依赖注入,改了注入有些问题暂时这样
             FastDFSClient client = new FastDFSClient("classpath:conf/client.conf");
 
             //获得上传文件的真实名称

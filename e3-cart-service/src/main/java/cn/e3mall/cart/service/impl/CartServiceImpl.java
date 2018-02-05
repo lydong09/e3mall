@@ -136,4 +136,13 @@ public class CartServiceImpl implements CartService {
         jedisClient.hdel(CART_PRE + ":" + userId, itemId + "");
         return E3Result.ok();
     }
+
+    @Override
+    public E3Result clear(long userId) {
+        //删除用户缓存的购物车
+        jedisClient.del(CART_PRE + ":" + userId);
+        return E3Result.ok();
+    }
+
+
 }

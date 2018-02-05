@@ -19,4 +19,6 @@ public interface CartService {
     E3Result updateCart(long userId,long itemId,int num);
 
     E3Result deleteCartItem(long userId,long itemId);
+
+    E3Result clear(long userId);
 }
