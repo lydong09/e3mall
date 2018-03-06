@@ -121,7 +121,7 @@ public class CartServiceImpl implements CartService {
         tbItem.setNum(num);
         //写入缓存
         jedisClient.hset(CART_PRE + ":" + userId, itemId + "", JsonUtils.objectToJson(tbItem));
-
+        
         return E3Result.ok();
     }
 

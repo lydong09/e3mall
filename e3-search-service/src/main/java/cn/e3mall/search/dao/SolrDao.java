@@ -1,9 +1,7 @@
 package cn.e3mall.search.dao;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
+import cn.e3mall.common.pojo.SearchItem;
+import cn.e3mall.common.pojo.SearchResult;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -13,8 +11,9 @@ import org.apache.solr.common.SolrDocumentList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import cn.e3mall.common.pojo.SearchItem;
-import cn.e3mall.common.pojo.SearchResult;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 //索引的需求不多，先不写接口了
 @Repository
 public class SolrDao {
@@ -51,7 +50,7 @@ public class SolrDao {
 				category_name = (String) solrDocument.get("item_category_name");
 			}
 			item.setCategory_name(category_name);
-			//最后处理高亮
+			//处理标题高亮
 			String title = "";
 			
 			List<String> list = map.get("item_title");

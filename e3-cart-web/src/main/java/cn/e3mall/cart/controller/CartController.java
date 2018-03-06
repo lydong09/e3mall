@@ -93,7 +93,7 @@ public class CartController {
     @RequestMapping("/cart/cart")
     public String showCart(HttpServletRequest request,HttpServletResponse response){
         //判断登录状态
-        //获取购物车中的商品信息并展示
+        //获取cookie中的购物车中的商品信息并展示
         List<TbItem> cartList = getCart(request);
 
 
@@ -178,7 +178,7 @@ public class CartController {
     }
 
     /**
-     * 获取购物车列表
+     * 获取cookie里购物车列表
      * @return
      */
     private List<TbItem> getCart(HttpServletRequest request){

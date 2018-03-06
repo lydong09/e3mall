@@ -1,19 +1,16 @@
 package cn.e3mall.content.service.impl;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import cn.e3mall.common.pojo.EasyUIDataGridResult;
 import cn.e3mall.common.pojo.EasyUINode;
-
 import cn.e3mall.content.service.ContentService;
 import cn.e3mall.mapper.TbContentCategoryMapper;
 import cn.e3mall.pojo.TbContentCategory;
 import cn.e3mall.pojo.TbContentCategoryExample;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Service
 public class ContentServiceImpl implements ContentService {
