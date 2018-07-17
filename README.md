@@ -16,4 +16,4 @@ SSM项目，maven工程,Dubbo + SSO + Shiro + Redis + Maven + ZooKeeper整合，
 
 markdown格式通过一个个标签完成排版，还能对代码部门高亮，而且还能纳入版本管理，具有提交记录
 
-可以这样生成一个连接：比如[百度](www.baidu.com)
+可以这样生成一个连接：比如[百度](https://www.baidu.com)
